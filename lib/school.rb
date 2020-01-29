@@ -1,10 +1,10 @@
 class School
-  attr_reader :name,
+  attr_reader :name, :start_time, :school_day_hours
 
-  def initialize (name_parameter, start_time_parameter, hours_parameter)
+  def initialize (name_parameter, start_time_parameter, hours_in_school_day_parameter)
     @name = name_parameter
-    @start_time = start
-    @hours = hours_parameter
+    @start_time = start_time_parameter
+    @school_day_hours = []
   end
 
 
