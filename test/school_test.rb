@@ -11,10 +11,11 @@ class SchoolTest < Minitest::Test
   end
 
   def test_it_has_start_time
-    school = School.new("AHS",'9:00', 7)
+    school = School.new('9:00', 7)
 
     assert_equal '9:00', school.start_time
   end
+
 #
   # def test_it_has_hours_in_school_day
   #   school = School.new('9:00', 7)
@@ -30,16 +31,16 @@ class SchoolTest < Minitest::Test
 #   end
 #
 #   #Iteration 2 Tests:
-#   def test_it_can_add_student_names
-#     skip
-#     school = School.new('9:00', 7)
-#
-#     school.add_student_name('Aurora')
-#     school.add_student_name('tim')
-#     school.add_student_name('megan')
-#
-#     assert_equal ['Aurora', 'tim', 'megan'], school.student_names
-#   end
+  def test_it_can_add_student_names
+
+    school = School.new('9:00', 7)
+
+    school.add_student_name('Aurora')
+    school.add_student_name('tim')
+    school.add_student_name('megan')
+
+    assert_equal ['Aurora', 'tim', 'megan'], school.student_names
+  end
 #
 #   def test_it_can_calculate_end_time
 #     skip
@@ -49,4 +50,7 @@ class SchoolTest < Minitest::Test
 #     assert_equal '16:00', school1.end_time
 #     assert_equal '12:00', school2.end_time
 #   end
+
 end
+
+require "pry"; binding.pry
